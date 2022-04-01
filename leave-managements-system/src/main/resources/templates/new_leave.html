@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Leave Management System</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1>Leave Management System</h1>
+		<hr>
+		<h2>Save Leaves</h2>
+
+		<form action="#" th:action="@{/saveLeave}" th:object="${leave}"
+			method="POST">
+			
+			
+	
+			
+			<input type="text" th:field="*{empname}"
+				placeholder="Employee name" class="form-control mb-4 col-4">
+				
+				<input type="text" th:field="*{deptname}"
+				placeholder="Employee dept name" class="form-control mb-4 col-4">
+				
+				<input type="text" th:field="*{leavetype}"
+				placeholder="Employee leave type" class="form-control mb-4 col-4">
+				
+				<input type="text" th:field="*{fromdate}"
+				placeholder="From date" class="form-control mb-4 col-4">
+				
+				<input type="text" th:field="*{todate}"
+				placeholder="To date" class="form-control mb-4 col-4">
+				
+				<input type="text" th:field="*{reason}"
+				placeholder="leave reason" class="form-control mb-4 col-4">
+				
+				
+				
+				
+				<button type="submit" class="btn btn-info col-2"> Submitt Leave</button>
+		</form>
+		
+		<hr>
+		
+		<a th:href = "@{/}"> Back to LeaveList</a>
+	</div>
+</body>
+</html>
